@@ -19,7 +19,7 @@ bucket = bconn.get_bucket(scraper_bkt);
 img_list = bucket.list(box+"/", "");
 for img in img_list:
     img_contents = img.name.split('/')
-    dir_name = img_contents[0]
+    dir_name = 'demo_box'
     file_name = img_contents[1]
     file_path = dir_name+'/original/'+file_name
     img.get_contents_to_filename(file_path)
